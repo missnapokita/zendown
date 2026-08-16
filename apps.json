@@ -65,8 +65,8 @@
     },
     {
       "id": "masterkit",
-      "name": "MasterKit",
-      "developer": "Zen Corpuz",
+      "name": "Masterkit",
+      "developer": "Zen Pogi",
       "category": "Tools",
       "tagline": "Guides and customization tools for MLBB players.",
       "shortDescription": "A compact MLBB toolkit with hero guides, preparations, maps, and customization features.",
@@ -74,13 +74,13 @@
         "MasterKit collects practical game references and customization tools in one Android app.",
         "Its organized sections make it easy to move from hero information to preparations, maps, and other utilities."
       ],
-      "version": "1.0.0",
-      "size": "Add size",
+      "version": "1",
+      "size": "24mb",
       "android": "Android 8.0+",
       "updated": "August 2026",
       "packageName": "com.iandev.masterkit",
-      "apkUrl": "",
-      "iconImage": "",
+      "apkUrl": "https://raw.githubusercontent.com/missnapokita/apps/main/masterkit.apk",
+      "iconImage": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Round%20Photo_Jul182026_181317.png",
       "iconText": "MK",
       "accent": "#f5c518",
       "accentDark": "#8b6800",
@@ -94,30 +94,37 @@
         {
           "title": "Home",
           "caption": "Open every major feature from one screen.",
-          "image": "",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_203941.jpg",
           "theme": "gold",
           "layout": "feed"
         },
         {
-          "title": "Heroes",
-          "caption": "Explore hero guides and details.",
-          "image": "",
+          "title": "Convert Skins",
+          "caption": "Convert All Skins",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_204020.jpg",
           "theme": "amber",
           "layout": "hero"
         },
         {
-          "title": "Preparations",
-          "caption": "Review builds and setups.",
-          "image": "",
+          "title": "Recall",
+          "caption": "Apply All Recalls",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_204027.jpg",
           "theme": "yellow",
           "layout": "grid"
         },
         {
-          "title": "Maps",
-          "caption": "Browse available battlefield options.",
-          "image": "",
+          "title": "Emotes",
+          "caption": "Apply All Emotes",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_204029.jpg",
           "theme": "bronze",
           "layout": "tools"
+        },
+        {
+          "title": "Maps",
+          "caption": "Apply Custom Maps",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_204034.jpg",
+          "theme": "gold",
+          "layout": "feed"
         }
       ]
     },
