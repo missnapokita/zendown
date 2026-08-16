@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101114">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Manage Zenhub apps and store information.">
+  <title>Zenhub Admin</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  <header class="admin-topbar">
+    <div class="admin-topbar-inner">
+      <a class="admin-brand" href="index.html" aria-label="Open Zenhub store">
+        <span class="brand-logo-wrap" aria-hidden="true">
+          <img class="brand-logo" data-admin-logo src="https://raw.githubusercontent.com/missnapokita/masterkiter/refs/heads/main/jajajs.png" alt="">
+        </span>
+        <span><strong>Zenhub</strong><small>Admin console</small></span>
+      </a>
+      <div class="admin-top-actions">
+        <span class="connection-badge" id="connection-badge"><i></i><span>Not connected</span></span>
+        <a class="admin-outline-button" href="index.html" target="_blank" rel="noopener">View store</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-welcome">
+      <div>
+        <p class="admin-eyebrow">Content manager</p>
+        <h1>Manage your app store.</h1>
+        <p>Add apps, update release information, arrange screenshots, and publish everything to Zenhub.</p>
+      </div>
+      <button class="admin-primary-button" id="add-app-top" type="button">
+        <span aria-hidden="true">＋</span> Add new app
+      </button>
+    </section>
+
+    <section class="connection-card" aria-labelledby="connection-heading">
+      <div class="panel-heading">
+        <div>
+          <p class="admin-eyebrow">Publishing connection</p>
+          <h2 id="connection-heading">Connect your GitHub repository</h2>
+        </div>
+        <button class="admin-text-button" id="disconnect-button" type="button" hidden>Disconnect</button>
+      </div>
+
+      <form id="github-form" class="connection-form">
+        <label>
+          <span>Owner</span>
+          <input id="github-owner" name="owner" value="missnapokita" autocomplete="username" required>
+        </label>
+        <label>
+          <span>Repository</span>
+          <input id="github-repo" name="repo" placeholder="zenhub-store" required>
+        </label>
+        <label>
+          <span>Branch</span>
+          <input id="github-branch" name="branch" value="main" placeholder="Auto-detected">
+        </label>
+        <label>
+          <span>Data file</span>
+          <input id="github-path" name="path" value="apps.json" required>
+        </label>
+        <label class="token-field">
+          <span>Fine-grained access token</span>
+          <span class="password-wrap">
+            <input id="github-token" name="token" type="password" placeholder="github_pat_…" autocomplete="off" required>
+            <button id="toggle-token" type="button" aria-label="Show token">Show</button>
+          </span>
+        </label>
+        <button class="admin-primary-button connect-button" id="connect-button" type="submit">Connect & load data</button>
+      </form>
+
+      <div class="connection-diagnostic" id="connection-diagnostic" hidden>
+        <span class="diagnostic-icon" aria-hidden="true">✓</span>
+        <div><strong id="diagnostic-title">Connection ready</strong><p id="diagnostic-message"></p></div>
+      </div>
+
+      <div class="security-note">
+        <span class="security-icon" aria-hidden="true">✓</span>
+        <p><strong>Use a fine-grained token limited to this repository.</strong> Give it only <em>Contents: Read and write</em>. The token stays in this browser tab and is never included in the website files.</p>
+      </div>
+    </section>
+
+    <section class="admin-stats" aria-label="Zenhub summary">
+      <article><span class="stat-icon">▦</span><div><strong id="stat-apps">0</strong><small>Total apps</small></div></article>
+      <article><span class="stat-icon">★</span><div><strong id="stat-featured">0</strong><small>Featured</small></div></article>
+      <article><span class="stat-icon">↗</span><div><strong id="stat-links">0</strong><small>Download links ready</small></div></article>
+      <article><span class="stat-icon">▣</span><div><strong id="stat-screenshots">0</strong><small>Screenshots</small></div></article>
+    </section>
+
+    <div class="admin-grid">
+      <section class="admin-panel store-settings" aria-labelledby="store-settings-heading">
+        <div class="panel-heading">
+          <div>
+            <p class="admin-eyebrow">Brand</p>
+            <h2 id="store-settings-heading">Store settings</h2>
+          </div>
+        </div>
+        <div class="settings-form">
+          <label>
+            <span>Store name</span>
+            <input id="store-name" value="Zenhub">
+          </label>
+          <label>
+            <span>Developer name</span>
+            <input id="store-developer" value="Zen Corpuz">
+          </label>
+          <label class="wide-field">
+            <span>Store tagline</span>
+            <input id="store-tagline" value="All your apps. One trusted hub.">
+          </label>
+          <label class="wide-field">
+            <span>Website logo URL</span>
+            <input id="store-logo" type="url" value="https://raw.githubusercontent.com/missnapokita/masterkiter/refs/heads/main/jajajs.png">
+          </label>
+          <label>
+            <span>Theme color</span>
+            <span class="color-input-wrap"><input id="store-accent" type="color" value="#f5c518"><input id="store-accent-text" value="#f5c518" maxlength="7"></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="admin-panel publish-panel" aria-labelledby="publish-heading">
+        <div>
+          <p class="admin-eyebrow">Live update</p>
+          <h2 id="publish-heading">Publish changes</h2>
+          <p>Save the current app list and store settings to the connected repository. GitHub Pages will use the updated data automatically.</p>
+        </div>
+        <div class="publish-actions">
+          <button class="admin-primary-button full-button" id="publish-button" type="button" disabled>Publish to Zenhub</button>
+          <button class="admin-outline-button full-button" id="export-button" type="button">Download backup</button>
+          <label class="admin-outline-button full-button import-label">Import backup<input id="import-input" type="file" accept="application/json,.json" hidden></label>
+        </div>
+        <p class="last-published" id="last-published">No changes published in this session.</p>
+      </section>
+    </div>
+
+    <section class="admin-panel apps-panel" aria-labelledby="apps-heading">
+      <div class="panel-heading apps-heading-row">
+        <div>
+          <p class="admin-eyebrow">Catalog</p>
+          <h2 id="apps-heading">Apps</h2>
+        </div>
+        <div class="apps-actions">
+          <label class="admin-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="admin-search" type="search" placeholder="Search apps">
+          </label>
+          <button class="admin-primary-button" id="add-app-button" type="button">＋ Add app</button>
+        </div>
+      </div>
+      <div class="admin-app-list" id="admin-app-list"></div>
+      <div class="admin-empty" id="admin-empty" hidden>
+        <span>▦</span>
+        <h3>No apps yet</h3>
+        <p>Add your first Android app to Zenhub.</p>
+        <button class="admin-primary-button" type="button" data-add-app>＋ Add app</button>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="app-editor-dialog" id="app-editor-dialog">
+    <form id="app-editor-form">
+      <header class="editor-header">
+        <div>
+          <p class="admin-eyebrow">App editor</p>
+          <h2 id="editor-title">Add new app</h2>
+        </div>
+        <button class="editor-close" id="editor-close" type="button" aria-label="Close editor">×</button>
+      </header>
+
+      <div class="editor-body">
+        <section class="editor-section">
+          <h3>Identity</h3>
+          <div class="editor-fields">
+            <label><span>App name *</span><input id="app-name" required></label>
+            <label><span>App ID / URL slug *</span><input id="app-id" pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="my-app" required></label>
+            <label><span>Developer</span><input id="app-developer"></label>
+            <label><span>Category</span><input id="app-category" placeholder="Tools"></label>
+            <label class="wide-field"><span>Icon image URL</span><input id="app-icon-image" type="url" placeholder="https://…/icon.png"></label>
+            <label><span>Icon letters</span><input id="app-icon-text" maxlength="3" placeholder="APP"></label>
+            <label><span>Featured app</span><span class="switch-row"><input id="app-featured" type="checkbox"><span>Show in the home banner</span></span></label>
+            <label><span>Icon color</span><span class="color-input-wrap"><input id="app-accent" type="color" value="#f5c518"><input id="app-accent-text" value="#f5c518" maxlength="7"></span></label>
+            <label><span>Icon dark color</span><span class="color-input-wrap"><input id="app-accent-dark" type="color" value="#8b6800"><input id="app-accent-dark-text" value="#8b6800" maxlength="7"></span></label>
+          </div>
+        </section>
+
+        <section class="editor-section">
+          <h3>Store description</h3>
+          <div class="editor-fields">
+            <label class="wide-field"><span>Tagline</span><input id="app-tagline" placeholder="One clear sentence about the app"></label>
+            <label class="wide-field"><span>Short description</span><textarea id="app-short-description" rows="3" maxlength="180"></textarea></label>
+            <label class="wide-field"><span>Full description</span><textarea id="app-description" rows="7" placeholder="Separate paragraphs with a blank line."></textarea></label>
+          </div>
+        </section>
+
+        <section class="editor-section">
+          <h3>Release and download</h3>
+          <div class="editor-fields">
+            <label><span>Version</span><input id="app-version" placeholder="1.0.0"></label>
+            <label><span>Download size</span><input id="app-size" placeholder="24 MB"></label>
+            <label><span>Requires Android</span><input id="app-android" placeholder="Android 8.0+"></label>
+            <label><span>Last updated</span><input id="app-updated" placeholder="August 2026"></label>
+            <label class="wide-field"><span>Package name</span><input id="app-package" placeholder="com.example.app"></label>
+            <label class="wide-field"><span>APK download link *</span><input id="app-apk-url" type="url" placeholder="https://github.com/…/app.apk"></label>
+            <label class="wide-field"><span>What's new</span><textarea id="app-whats-new" rows="5" placeholder="One change per line"></textarea></label>
+          </div>
+        </section>
+
+        <section class="editor-section screenshot-editor-section">
+          <div class="editor-section-heading">
+            <div><h3>Screenshots</h3><p>Add image links in the order they should appear.</p></div>
+            <button class="admin-outline-button" id="add-screenshot" type="button">＋ Add screenshot</button>
+          </div>
+          <div class="screenshot-editor-list" id="screenshot-editor-list"></div>
+        </section>
+      </div>
+
+      <footer class="editor-footer">
+        <button class="admin-outline-button" id="editor-cancel" type="button">Cancel</button>
+        <button class="admin-primary-button" type="submit">Save app</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="confirm-dialog" id="confirm-dialog">
+    <div class="confirm-icon">!</div>
+    <h2>Remove this app?</h2>
+    <p id="confirm-message">This app will be removed from the Zenhub catalog after you publish.</p>
+    <div class="confirm-actions">
+      <button class="admin-outline-button" id="confirm-cancel" type="button">Cancel</button>
+      <button class="danger-button" id="confirm-delete" type="button">Remove app</button>
+    </div>
+  </dialog>
+
+  <div class="admin-toast" id="admin-toast" role="status" aria-live="polite"></div>
+
+  <script src="apps.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
