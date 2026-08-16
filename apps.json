@@ -26,7 +26,7 @@
       "iconText": "BT",
       "accent": "#7ccb69",
       "accentDark": "#2f7f38",
-      "featured": true,
+      "featured": false,
       "whatsNew": [
         "Clean green interface",
         "Hero guides and useful MLBB tools",
@@ -35,14 +35,14 @@
       "screenshots": [
         {
           "title": "For You",
-          "caption": "Discover heroes and the latest content.",
+          "caption": "Discover heroes",
           "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205411.jpg",
           "theme": "green",
           "layout": "feed"
         },
         {
           "title": "Hero Guide",
-          "caption": "View stats, builds, skills, and counters.",
+          "caption": "Hero Details",
           "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205416.jpg",
           "theme": "forest",
           "layout": "hero"
@@ -55,7 +55,7 @@
           "layout": "grid"
         },
         {
-          "title": "Battle Effectd",
+          "title": "Battle Effects",
           "caption": "Apply Battle Effects",
           "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205516.jpg",
           "theme": "lime",
@@ -65,7 +65,7 @@
           "title": "Maps",
           "caption": "Apply Custom Maps",
           "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205522.jpg",
-          "theme": "gold",
+          "theme": "lime",
           "layout": "feed"
         }
       ]
@@ -91,7 +91,7 @@
       "iconText": "MK",
       "accent": "#f5c518",
       "accentDark": "#8b6800",
-      "featured": false,
+      "featured": true,
       "whatsNew": [
         "Updated guide presentation",
         "Improved app navigation",
@@ -138,21 +138,21 @@
     {
       "id": "bidamax",
       "name": "BidaMax",
-      "developer": "Zen Corpuz",
+      "developer": "Zen Pogi",
       "category": "Entertainment",
-      "tagline": "Movies and series in one easy-to-browse app.",
+      "tagline": "Free Tagalog Dubbed Movies, Series, and Anime",
       "shortDescription": "Discover movies, series, anime, and new releases through a simple streaming catalog.",
       "description": [
         "BidaMax presents movies and series in a clean catalog made for mobile viewing.",
         "Browse titles, read information, explore episodes, and quickly return to the shows you want to watch."
       ],
-      "version": "1.0.0",
-      "size": "Add size",
+      "version": "1",
+      "size": "20mb",
       "android": "Android 8.0+",
       "updated": "August 2026",
-      "packageName": "Add package name",
-      "apkUrl": "",
-      "iconImage": "",
+      "packageName": "bidamaxngpinas",
+      "apkUrl": "https://play.google.com/store/apps/details?id=com.bidamax",
+      "iconImage": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/20260623_234959.jpg",
       "iconText": "BM",
       "accent": "#e14664",
       "accentDark": "#921d3d",
@@ -166,30 +166,23 @@
         {
           "title": "Discover",
           "caption": "Browse featured movies and series.",
-          "image": "",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_210329.jpg",
           "theme": "rose",
           "layout": "feed"
         },
         {
           "title": "Movie Details",
           "caption": "Read the overview before watching.",
-          "image": "",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_210335.jpg",
           "theme": "wine",
           "layout": "hero"
         },
         {
           "title": "Series",
           "caption": "Find seasons and episodes quickly.",
-          "image": "",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_210342.jpg",
           "theme": "coral",
           "layout": "grid"
-        },
-        {
-          "title": "My List",
-          "caption": "Keep your favorite titles close.",
-          "image": "",
-          "theme": "plum",
-          "layout": "tools"
         }
       ]
     }
