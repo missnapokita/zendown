@@ -8,7 +8,7 @@
     {
       "id": "bisaya-toolkit",
       "name": "Bisaya Toolkit",
-      "developer": "Zen Corpuz",
+      "developer": "Zen Pogi",
       "category": "Tools",
       "tagline": "Your MLBB companion in one clean toolkit.",
       "shortDescription": "Hero guides, builds, equipment, battle effects, and useful MLBB tools in one place.",
@@ -16,13 +16,13 @@
         "Bisaya Toolkit brings your most-used Mobile Legends companion tools into one fast and organized app.",
         "Browse hero information, suggested builds, equipment, battle effects, and other utilities through a clean interface designed for Android."
       ],
-      "version": "1.0.0",
-      "size": "Add size",
+      "version": "1",
+      "size": "32mb",
       "android": "Android 8.0+",
       "updated": "August 2026",
       "packageName": "com.bisayatoolkit.ph",
-      "apkUrl": "",
-      "iconImage": "",
+      "apkUrl": "https://play.google.com/store/apps/details?id=com.bisayatoolkit.ph",
+      "iconImage": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/app_icon.png",
       "iconText": "BT",
       "accent": "#7ccb69",
       "accentDark": "#2f7f38",
@@ -36,30 +36,37 @@
         {
           "title": "For You",
           "caption": "Discover heroes and the latest content.",
-          "image": "",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205411.jpg",
           "theme": "green",
           "layout": "feed"
         },
         {
           "title": "Hero Guide",
           "caption": "View stats, builds, skills, and counters.",
-          "image": "",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205416.jpg",
           "theme": "forest",
           "layout": "hero"
         },
         {
-          "title": "Equipments",
-          "caption": "Browse equipment by category.",
-          "image": "",
+          "title": "Skins",
+          "caption": "Apply Skins",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205418.jpg",
           "theme": "mint",
           "layout": "grid"
         },
         {
-          "title": "Tools",
-          "caption": "Quick access to useful calculators and tools.",
-          "image": "",
+          "title": "Battle Effectd",
+          "caption": "Apply Battle Effects",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205516.jpg",
           "theme": "lime",
           "layout": "tools"
+        },
+        {
+          "title": "Maps",
+          "caption": "Apply Custom Maps",
+          "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_205522.jpg",
+          "theme": "gold",
+          "layout": "feed"
         }
       ]
     },
@@ -71,7 +78,7 @@
       "tagline": "Guides and customization tools for MLBB players.",
       "shortDescription": "A compact MLBB toolkit with hero guides, preparations, maps, and customization features.",
       "description": [
-        "MasterKit collects practical game references and customization tools in one Android app.",
+        "Masterkit collects practical game references and customization tools in one Android app.",
         "Its organized sections make it easy to move from hero information to preparations, maps, and other utilities."
       ],
       "version": "1",
@@ -80,7 +87,7 @@
       "updated": "August 2026",
       "packageName": "com.iandev.masterkit",
       "apkUrl": "https://raw.githubusercontent.com/missnapokita/apps/main/masterkit.apk",
-      "iconImage": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Round%20Photo_Jul182026_181317.png",
+      "iconImage": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/mdmd.png",
       "iconText": "MK",
       "accent": "#f5c518",
       "accentDark": "#8b6800",
@@ -93,7 +100,7 @@
       "screenshots": [
         {
           "title": "Home",
-          "caption": "Open every major feature from one screen.",
+          "caption": "Browse All Heroes",
           "image": "https://raw.githubusercontent.com/missnapokita/apps/main/icon/Screenshot_20260816_203941.jpg",
           "theme": "gold",
           "layout": "feed"
