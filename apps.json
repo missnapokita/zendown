@@ -1,6 +1,6 @@
 {
   "name": "Zenhub",
-  "developer": "Zen Corpuz",
+  "developer": "Zen Pogi",
   "tagline": "All your apps. One trusted hub.",
   "logo": "https://raw.githubusercontent.com/missnapokita/masterkiter/refs/heads/main/jajajs.png",
   "accent": "#f5c518",
@@ -33,10 +33,34 @@
         "Performance and stability improvements"
       ],
       "screenshots": [
-        { "title": "For You", "caption": "Discover heroes and the latest content.", "image": "", "theme": "green", "layout": "feed" },
-        { "title": "Hero Guide", "caption": "View stats, builds, skills, and counters.", "image": "", "theme": "forest", "layout": "hero" },
-        { "title": "Equipments", "caption": "Browse equipment by category.", "image": "", "theme": "mint", "layout": "grid" },
-        { "title": "Tools", "caption": "Quick access to useful calculators and tools.", "image": "", "theme": "lime", "layout": "tools" }
+        {
+          "title": "For You",
+          "caption": "Discover heroes and the latest content.",
+          "image": "",
+          "theme": "green",
+          "layout": "feed"
+        },
+        {
+          "title": "Hero Guide",
+          "caption": "View stats, builds, skills, and counters.",
+          "image": "",
+          "theme": "forest",
+          "layout": "hero"
+        },
+        {
+          "title": "Equipments",
+          "caption": "Browse equipment by category.",
+          "image": "",
+          "theme": "mint",
+          "layout": "grid"
+        },
+        {
+          "title": "Tools",
+          "caption": "Quick access to useful calculators and tools.",
+          "image": "",
+          "theme": "lime",
+          "layout": "tools"
+        }
       ]
     },
     {
@@ -67,10 +91,34 @@
         "Bug fixes and performance updates"
       ],
       "screenshots": [
-        { "title": "Home", "caption": "Open every major feature from one screen.", "image": "", "theme": "gold", "layout": "feed" },
-        { "title": "Heroes", "caption": "Explore hero guides and details.", "image": "", "theme": "amber", "layout": "hero" },
-        { "title": "Preparations", "caption": "Review builds and setups.", "image": "", "theme": "yellow", "layout": "grid" },
-        { "title": "Maps", "caption": "Browse available battlefield options.", "image": "", "theme": "bronze", "layout": "tools" }
+        {
+          "title": "Home",
+          "caption": "Open every major feature from one screen.",
+          "image": "",
+          "theme": "gold",
+          "layout": "feed"
+        },
+        {
+          "title": "Heroes",
+          "caption": "Explore hero guides and details.",
+          "image": "",
+          "theme": "amber",
+          "layout": "hero"
+        },
+        {
+          "title": "Preparations",
+          "caption": "Review builds and setups.",
+          "image": "",
+          "theme": "yellow",
+          "layout": "grid"
+        },
+        {
+          "title": "Maps",
+          "caption": "Browse available battlefield options.",
+          "image": "",
+          "theme": "bronze",
+          "layout": "tools"
+        }
       ]
     },
     {
@@ -101,10 +149,34 @@
         "Playback stability improvements"
       ],
       "screenshots": [
-        { "title": "Discover", "caption": "Browse featured movies and series.", "image": "", "theme": "rose", "layout": "feed" },
-        { "title": "Movie Details", "caption": "Read the overview before watching.", "image": "", "theme": "wine", "layout": "hero" },
-        { "title": "Series", "caption": "Find seasons and episodes quickly.", "image": "", "theme": "coral", "layout": "grid" },
-        { "title": "My List", "caption": "Keep your favorite titles close.", "image": "", "theme": "plum", "layout": "tools" }
+        {
+          "title": "Discover",
+          "caption": "Browse featured movies and series.",
+          "image": "",
+          "theme": "rose",
+          "layout": "feed"
+        },
+        {
+          "title": "Movie Details",
+          "caption": "Read the overview before watching.",
+          "image": "",
+          "theme": "wine",
+          "layout": "hero"
+        },
+        {
+          "title": "Series",
+          "caption": "Find seasons and episodes quickly.",
+          "image": "",
+          "theme": "coral",
+          "layout": "grid"
+        },
+        {
+          "title": "My List",
+          "caption": "Keep your favorite titles close.",
+          "image": "",
+          "theme": "plum",
+          "layout": "tools"
+        }
       ]
     }
   ]
