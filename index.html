@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Download the latest Android apps from Zenhub.">
+  <title>Zenhub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/" aria-label="Zenhub home">
+        <span class="brand-logo-wrap" aria-hidden="true">
+          <img class="brand-logo" data-store-logo src="https://raw.githubusercontent.com/missnapokita/masterkiter/refs/heads/main/jajajs.png" alt="">
+        </span>
+        <span class="brand-name" data-store-name>Zenhub</span>
+      </a>
+
+      <label class="search" id="search-shell">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="m20.2 18.9-4.3-4.3a7.3 7.3 0 1 0-1.4 1.4l4.3 4.3a1 1 0 0 0 1.4-1.4ZM5.5 10.3a5.3 5.3 0 1 1 10.6 0 5.3 5.3 0 0 1-10.6 0Z"/>
+        </svg>
+        <input id="app-search" type="search" autocomplete="off" placeholder="Search apps" aria-label="Search apps">
+      </label>
+
+      <a class="profile-button" href="#/about" aria-label="About Zenhub" title="About Zenhub">
+        <img data-store-logo src="https://raw.githubusercontent.com/missnapokita/masterkiter/refs/heads/main/jajajs.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="page home-page" id="home-page" aria-labelledby="home-heading">
+      <div class="content-width">
+        <div class="hero" id="featured-app"></div>
+
+        <div class="section-heading app-list-heading">
+          <div>
+            <p class="eyebrow">Your collection</p>
+            <h1 id="home-heading">All apps</h1>
+          </div>
+          <span class="app-count" id="app-count" aria-live="polite"></span>
+        </div>
+
+        <div class="app-grid" id="app-grid"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">⌕</span>
+          <h2>No apps found</h2>
+          <p>Try a different app name or category.</p>
+          <button class="text-button" id="clear-search" type="button">Clear search</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page detail-page" id="detail-page" aria-labelledby="detail-title" hidden>
+      <div class="content-width detail-width">
+        <nav class="detail-nav" aria-label="App details navigation">
+          <button class="back-button" id="back-button" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2Z"/></svg>
+            <span>All apps</span>
+          </button>
+          <button class="icon-button" id="share-button" type="button" aria-label="Share this app" title="Share this app">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.1a3 3 0 0 0 0-1.6L16 7.1a3 3 0 1 0-1-1.8L7.9 9.4A3 3 0 1 0 8 14.6l7 4.1a3 3 0 1 0 3-2.6Z"/></svg>
+          </button>
+        </nav>
+
+        <div id="detail-content"></div>
+      </div>
+
+      <div class="mobile-download-bar" id="mobile-download-bar" hidden>
+        <div>
+          <span id="mobile-app-name">App</span>
+          <small id="mobile-version">Latest version</small>
+        </div>
+        <button class="primary-button compact" id="mobile-download-button" type="button">Download</button>
+      </div>
+    </section>
+
+    <section class="page about-page" id="about-page" aria-labelledby="about-heading" hidden>
+      <div class="content-width narrow-width">
+        <button class="back-button about-back" type="button" data-home-link>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2Z"/></svg>
+          <span>Home</span>
+        </button>
+        <p class="eyebrow">About this store</p>
+        <h1 id="about-heading" data-store-name>Zenhub</h1>
+        <p class="large-copy">A simple, direct place to discover and download our Android apps. Every download button points to the app file chosen by the developer.</p>
+        <div class="info-panel">
+          <h2>Before installing an APK</h2>
+          <p>Android may ask you to allow installation from your browser. Only continue when you recognize and trust the app source.</p>
+        </div>
+        <a class="admin-entry" href="admin.html">
+          <span class="admin-entry-icon" aria-hidden="true">⚙</span>
+          <span><strong>Zenhub Admin</strong><small>Manage apps, details, screenshots, and download links</small></span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <a class="bottom-nav-item is-active" href="#/" data-nav="home">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3-9 8h2v9h5v-6h4v6h5v-9h2l-9-8Z"/></svg>
+      <span>Home</span>
+    </a>
+    <a class="bottom-nav-item" href="#/apps" data-nav="apps">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z"/></svg>
+      <span>Apps</span>
+    </a>
+    <a class="bottom-nav-item" href="#/about" data-nav="about">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 10h2v7h-2v-7Zm0-3h2v2h-2V7Zm1-5a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z"/></svg>
+      <span>About</span>
+    </a>
+  </nav>
+
+  <dialog class="screenshot-dialog" id="screenshot-dialog">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Close screenshot">×</button>
+    <div id="dialog-media"></div>
+    <div class="dialog-caption" id="dialog-caption"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="apps.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
